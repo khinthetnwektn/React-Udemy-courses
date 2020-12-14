@@ -1,0 +1,25 @@
+<html>
+    <head></head>
+    <body>
+        <div id='p1'></div>
+        <div id='p2'></div>
+
+        <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+        <script type="text/babel">
+            function Person(props) {
+                return (
+                    <div className="person">
+                        <h1>{props.name}</h1>
+                        <p> Age : {props.age}</p>
+                    </div>
+                );
+            }
+
+            ReactDOM.render(<Person name="John" age="20" />, document.querySelector('#p1'));
+            ReactDOM.render(<Person name="Jenni" age="21" />, document.querySelector('#p2'));
+        </script>
+    </body>
+</html>
